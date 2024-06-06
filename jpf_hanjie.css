@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5, CSS3, and JavaScript 6th Edition
+   Tutorial 11
+   Tutorial Case
+
+   Hanjie Puzzle Style Sheet
+   Author: Rebecca Peretz
+   Date:   2018-03-01
+
+   Filename:         jpf_hanjie.css
+
+*/
+
+/* Table Styles */
+
+table#hanjieGrid {
+   border: 1px solid black;
+   border-collapse: collapse;
+   font-size: 0.8em;
+   margin: 0px auto;
+   box-shadow: rgb(101, 101, 101) 5px 5px 10px, rgb(101, 101, 101) -5px 5px 10px;
+}
+
+table#hanjieGrid caption {
+   font-size: 1.25em;
+   color: rgba(97,156,97,1.00);
+   text-align: right;
+   caption-side: bottom;
+   padding-top: 12px;
+}
+
+table#hanjieGrid td {
+   width: 20px;
+   height: 20px;
+   border: 1px solid black;
+   box-shadow: inset rgba(0, 0, 0, 0.65) 0px 0px 5px;
+}
+
+table#hanjieGrid th {
+   background-color: rgb(191, 191, 191);
+   color: black;
+}
+
+table#hanjieGrid th {
+   vertical-align: bottom;
+   text-align: right;
+   font-weight: normal;
+   border: 1px solid black;
+}
+
+table#hanjieGrid th.cols {
+   width: 20px;
+}
+
+table#hanjieGrid th.rows {
+   height: 20px;
+}
+
+table#hanjieGrid tr td:nth-of-type(5n), #hanjieGrid tr:first-of-type th:nth-of-type(5n+6) {
+   border-right: 2px solid rgb(111, 255, 111);
+}
+
+table#hanjieGrid tr td:last-of-type, table#hanjieGrid tr:first-of-type th:last-of-type {
+   border-right: 1px solid black;
+}
+
+table#hanjieGrid tr:nth-of-type(5n +6) {
+   border-bottom: 2px solid rgb(111, 255, 111);
+}
+
+table#hanjieGrid tr:last-of-type {
+   border-bottom: 1px solid black;
+}
+
+
+/* Hanjie cell colors */
+
+table#hanjieGrid td.empty {
+   background-color: rgb(216, 231, 244);
+}
+
+table#hanjieGrid td.filled {
+   background-color: rgb(58, 133, 202);
+}
+

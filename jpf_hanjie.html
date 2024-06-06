@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      New Perspectives on HTML5, CSS3 and JavaScript 6th Edition
+      Tutorial 11
+      Tutorial Case
+
+      Hanjie Interactive Puzzle
+      Author: Todd Nash
+      Date: 2024-06-06
+
+      Filename:   jpf_hanjie.html
+
+   -->
+   
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />   
+   <title>The Hanjie Puzzle</title>
+   <link href="jpf_base.css" rel="stylesheet" />
+   <link href="jpf_layout.css" rel="stylesheet" />   
+   <link href="jpf_hanjie.css" rel="stylesheet" />
+   <script src="jpf_hanjie.js" async></script>
+   <script src="jpf_grids1.js" async></script>
+</head>
+
+<body>
+   <header>
+      <img src="jpf_logo.png" alt="Japanese Puzzle Factory" id="logoimg" />
+      <nav>
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">Hints</a></li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Competitions</a></li>
+            <li><a href="#">Site Map</a></li>
+         </ul>
+      </nav>
+   </header>
+   
+   <section>
+      <div id="topButtons">
+         <input type="button" class="puzzles" id="puzzle1" value="Puzzle 1" />
+         <input type="button" class="puzzles" id="puzzle2" value="Puzzle 2" />
+         <input type="button" class="puzzles" id="puzzle3" value="Puzzle 3" />
+      </div>
+   
+      <h1 id="puzzleTitle"></h1>
+   
+      <figure id="puzzle"></figure>
+   
+      <div id="bottomButtons">
+         <input type="button" id="peek" value="Peek!" />
+         <input type="button" id="solve" value="Show Solution" />
+      </div>  
+   </section>
+   
+   <aside>
+      <h1>To Play</h1>
+      <p>
+         Click the <span>Puzzle 1</span> through <span>Puzzle 3</span>
+         buttons to select a puzzle. A completed puzzle displays a pixelated
+         image matching the patterns shown in the row and column 
+         headings. To draw the image, click and drag the mouse pointer
+         over the grid cells. Mark empty cells by holding down the
+         <span>Alt</span> key as you click and drag. To erase your 
+         guesses, hold down the <span>Shift</span> key as you click and
+         drag.
+      </p>
+      <p>Stumped? Click the <span>Peek!</span> button to
+         highlight your errors. Incorrect filled cells
+         will be highlighted in red; incorrect empty cells 
+         will be highlighted in pink. Give up?
+         Click the <span>Show Solution</span> button to view the
+         completed puzzle.
+      </p>
+   </aside>
+   
+   <article>
+      <h1>About Hanjie</h1>
+      <p>
+         <strong>Hanjie</strong> is a Japanese logic puzzle 
+         played on a table grid. At the top of 
+         each column and to the left of each row are sets of numbers 
+         that indicate how many cells in that column or row are 
+         marked, working from the top down or from left to right.
+      </p>
+      <p>
+         For example, <code>3 8 1</code>
+         indicates that there is a block of three 
+         marked cells followed by a gap and then another eight marked cells,
+         followed by another gap and then one last marked cell. Gaps can 
+         be of any length and can only be determined by 
+         clues provided for the other rows and columns in the grid.
+      </p>
+      <p>
+         The completed puzzle shows a pixelated image. A hint describing 
+         the image is provided with the puzzle. For tips on solving 
+         Hanjie, view the <a href="#">Hanjie Strategy page</a>.
+      </p>
+   </article>
+      
+   <footer>
+      <nav>
+         <ul>
+            <li><a href="#">Akari</a></li>
+            <li><a href="#">Divide by Box</a></li>
+            <li><a href="#">Fillomino</a></li>
+            <li><a href="#">Hanjie</a></li>            
+            <li><a href="#">Hashiwokakero</a></li>
+
+         </ul>
+         <ul>
+            <li><a href="#">Heyawake</a></li>         
+            <li><a href="#">Hitori</a></li>
+            <li><a href="#">Kakuro</a></li>
+            <li><a href="#">Katagaku</a></li>
+            <li><a href="#">Masugo</a></li>
+         </ul>   
+         <ul>
+            <li><a href="#">Masyu</a></li>
+            <li><a href="#">Oekaki Logic</a></li>
+            <li><a href="#">Shikaku</a></li>
+            <li><a href="#">Sudoku</a></li>
+            <li><a href="#">Suhai</a></li>
+         </ul>  
+         <ul>
+            <li><a href="#">Super Sudoku</a></li>
+            <li><a href="#">Tenketsu</a></li>
+            <li><a href="#">Tentai Show</a></li>
+            <li><a href="#">Wordoku</a></li>
+            <li><a href="#">Yajilin</a></li>         
+         </ul>              
+      </nav>
+   </footer>
+      
+</body>
+</html>
