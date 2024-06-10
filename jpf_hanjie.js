@@ -67,6 +67,38 @@ function init(){
 }
 
 
+var buttons = document.getElementsByClassName("puzzles");
+
+for(var i = 0; i < buttons.length; i++){
+   buttons[i].onclick = swapPuzzle;
+}
+
+
+function swapPuzzle(e){
+  var puzzleID = this.id;
+  var puzzleTitle = e.target.value;
+  document.getElementById("puzzleTitle").innerHTML = puzzleTitle;
+
+
+  switch(puzzleID){
+   case "puzzle1":
+      document.getElementById("puzzle").innerHTML = 
+      drawPuzzle(puzzle1Hint, puzzle1Rating, puzzle1);
+      break;
+   case "puzzle2":
+      document.getElementById("puzzle").innerHTML = 
+      drawPuzzle(puzzle2Hint, puzzle2Rating, puzzle2);
+      break;
+   case "puzzle3":
+      document.getElementById("puzzle").innerHTML = 
+      drawPuzzle(puzzle3Hint, puzzle3Rating, puzzle3);
+      break;
+}
+
+}
+
+
+
 
 
 
