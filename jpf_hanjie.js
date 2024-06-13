@@ -74,6 +74,8 @@ function init(){ //lifecycle method
 
    setupPuzzle();
 
+   document.addEventListener('mouseup', endBackground);
+
 }
 
 
@@ -118,7 +120,23 @@ function setupPuzzle(){
 }
 
 function setBackground(e){
-   cellBackground = 'rgb(101, 101, 101)';
+   e.preventDefault();
+
+   console.log(e)
+
+   switch(e){
+      case e.shiftKey:
+         cellBackground = 'rgb(233, 207, 29)';
+      break;
+      case e.altKey:
+         cellBackground = 'rgb(255, 255, 255)';
+      break;
+      default:
+         cellBackground = 'rgb(101, 101, 101)';
+      break;   
+   }
+
+
    this.style.backgroundColor = cellBackground;
    //e.target.style.backgroundColor = cellBackground;
 
@@ -131,6 +149,11 @@ function extendBackground(e){
    this.style.backgroundColor = cellBackground;
 }
 
+function endBackground(){
+   for(var i = 0; i < puzzleCells.length; i++){
+      puzzleCells[i].removeEventListener('mouseenter', endBackground);
+   }
+}
 
          
 /* ================================================================= */
