@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style> /* This is called embedded CSS   */
+    <style> /* This is called embedded CSS  */
+      th{
+        background: lightgrey;
+      }
       table, th, td{
         border:  1px solid black;
         border-collapse: collapse;
-      }
-      td{
         padding: 10px;
+        text-align: center;
       }
+      tfoot{
+        text-align: center;
+      }
+    
     </style>
   </head>
 
@@ -30,15 +36,25 @@
         <tr>
           <td>Chicken noodle soup</td>
           <td>120</td>
-          <td>2</td>
+          <td rowspan="2">2</td>
         </tr>
 
          <tr>
           <td>Ceasar Salad</td>
           <td>400</td>
-          <td>26</td>
         </tr>
+
+         <tr>
+            <td>Maggi</td>
+            <td colspan='2'>400 (Cal.)</td>
+          </tr>
       </tbody>
+
+      <tfoot>
+         <tr>
+            <td colspan="3">This is a footer</td>
+         </tr>
+      </tfoot>
       
     </table>  
     
