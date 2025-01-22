@@ -6,11 +6,13 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
+                max-width:380px;
             }
 
             form fieldset input {
                 float: right;
                 margin: 5px;
+                margin-right:5%;
             }
 
             button {
@@ -45,7 +47,15 @@
                     <input type="text" name="phone"/>
                 </label>  
 
-                <button type="submit">Submit</button>
+                <label for="email">Email:
+                    <input type="email" name="email"/>
+                </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Delivery Instructions</legend>
+            <p>Limit character length.  Max limit of 400 characters</p>
+            <textarea rows="5" cols="40"></textarea>
         </fieldset>
         </form>
     </body>
