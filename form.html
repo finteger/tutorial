@@ -1,0 +1,54 @@
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #form{
+        display: flex;
+        flex-direction: column;
+        width:180px;  
+        border: 1px solid #ddd;
+        border-radius:10px;
+        padding: 10px;
+        box-shadow: 2px 2px 5px grey;
+    }
+    #form, h2{
+        color: grey;
+        text-align: center;
+        font-family: verdana;
+        text-transform:uppercase;
+        font-size:15px;
+    }
+    input{
+        margin: 10px;
+        border-radius: 5px;
+        font-size: 10px;
+        padding:5px;
+        border: 1px solid #ddd;
+    }
+
+    button{
+        border-radius:25px;
+        background:lightblue;
+        color:white;
+        font-weight: 700;
+        border: 0px;
+        padding:5px;
+        box-shadow: 2px 2px 7px #ddd;
+    }
+
+</style>
+
+
+<form action="controller.php" id="form">
+    <h2>Login</h2>
+
+
+    <input type="text" placeholder="Enter name"/>
+    <input type="password" placeholder="Enter password"/>
+    <br />
+    <br />
+    <button>Submit</button>
+</form>
