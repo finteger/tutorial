@@ -1,7 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            form fieldset{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
 
+            form fieldset input {
+                float: right;
+                margin: 5px;
+            }
+
+            button {
+                margin: 20px;
+                max-width: 100px;
+            }
+        </style>
     </head>
 
 
@@ -16,10 +32,20 @@
         <form action="action_page.php">
             <fieldset>
                 <legend>Your Information</legend>
+               
+                <label for="name">Name:
+                    <input type="text" name="name"/>
+                </label>  
 
-           
+                <label for="address">Address:
+                    <input type="text" name="address"/>
+                </label>  
+                
+                <label for="phone">Telephone:
+                    <input type="text" name="phone"/>
+                </label>  
 
-            <button type="submit">Submit</button>
+                <button type="submit">Submit</button>
         </fieldset>
         </form>
     </body>
