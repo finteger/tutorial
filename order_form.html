@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--This is called embedded styling-->
         <style>
+            fieldset {
+                background-color: lightblue;
+                border-radius: 8px;
+            }
+            input{
+                border-radius: 5px;
+                border: 1px solid grey;
+            }
             form fieldset{
                 display: flex;
+                margin: 0 auto;
                 flex-direction: column;
                 justify-content: flex-end;
                 max-width:380px;
@@ -24,11 +34,14 @@
 
 
     <body>
-        <h2>Black Goose Bistro | Pizza On-Demand </h2>
-        <p>
-            Our 12" wood-fired pizza are available for delivery.  
-            Build your own custom pizza and we will deliver it in an hour.
-        </p>
+
+        <center>
+            <h2>Black Goose Bistro | Pizza On-Demand </h2>
+            <p>
+                Our 12" wood-fired pizza are available for delivery.  
+                Build your own custom pizza and we will deliver it in an hour.
+            </p>
+        </center>
 
 
         <form action="action_page.php">
@@ -68,6 +81,21 @@
                     <li>Multigrain<input type="radio" name="groupName" ></li>
                     <li>Cheese-stuffed crust<input type="radio" name="groupName" ></li>
                     <li>Gluten-free<input type="radio" name="groupName" ></li>
+                </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>Toppings</legend>
+            <h4>Choose as many as you want.</h4>
+
+                <ul style="display: flex;flex-direction:column;max-width:200px;">
+                    <li>White Sauce<input type="radio" checked></li>
+                    <li>Red Sauce<input type="radio"></li>
+                    <li>Mozzarella Cheese<input type="radio"></li>
+                    <li>Pepperoni<input type="radio"></li>
+                    <li>Mushrooms<input type="radio"></li>
+                    <li>Peppers<input type="radio"></li>
+                    <li>Anchovies<input type="radio"></li>
                 </ul>
         </fieldset>
         </form>
