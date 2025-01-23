@@ -37,7 +37,7 @@
 
         <center>
             <h2>Black Goose Bistro | Pizza On-Demand </h2>
-            <p>
+            <p style="max-width:50%;">
                 Our 12" wood-fired pizza are available for delivery.  
                 Build your own custom pizza and we will deliver it in an hour.
             </p>
@@ -87,20 +87,41 @@
         <fieldset>
             <legend>Toppings</legend>
             <h4>Choose as many as you want.</h4>
-
-                <ul style="display: flex;flex-direction:column;max-width:200px;">
-                    <li>White Sauce<input type="radio" checked></li>
-                    <li>Red Sauce<input type="radio"></li>
-                    <li>Mozzarella Cheese<input type="radio"></li>
-                    <li>Pepperoni<input type="radio"></li>
-                    <li>Mushrooms<input type="radio"></li>
-                    <li>Peppers<input type="radio"></li>
-                    <li>Anchovies<input type="radio"></li>
-                </ul>
+        
+            <ul style="display: flex; flex-direction: column; max-width: 200px;">
+                <li>White Sauce<input type="radio" class="toppings" checked></li>
+                <li>Red Sauce<input type="radio" class="toppings" ></li>
+                <li>Mozzarella Cheese<input type="radio" class="toppings"></li>
+                <li>Pepperoni<input type="radio" class="toppings"></li>
+                <li>Mushrooms<input type="radio" class="toppings"></li>
+                <li>Peppers<input type="radio" class="toppings"></li>
+                <li>Anchovies<input type="radio" class="toppings"></li>
+            </ul>
         </fieldset>
-        </form>
+
+        <fieldset>
+        <legend>Additional Info</legend>
+            <label for="number">Number of pizzas:
+                <input type="number" name="number" max="10"/>
+            </label>
+        </fieldset>
+
+        <div id="buttons">
+            <button>Submit</button>
+            <button>Subscribe</button>
+            <button>Reset</button>
+        </div>
+
+     </form>
     </body>
-
-
+        
+        <script>
+            const toppings = document.querySelectorAll(".toppings");
+            
+            toppings.forEach((topping) => {    
+                topping.checked = false;
+            });
+        </script>
+    
 
 </html>
